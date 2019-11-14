@@ -1,0 +1,53 @@
+.site {    
+    height: 100%;
+    width: 100%;
+}
+
+.header {
+    background-color: #337569;
+    // background-color: #F19C86;
+    height: 15rem;
+    width: 100%;
+    color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__decoline {
+        background: #DA3556;
+        height: 9rem;
+        width: .25rem;
+        position: relative;
+        right: .5rem;
+        
+    }
+
+    &__text {
+        height: 9rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        // background-color: pink;
+
+        &-name {
+            font-family: 'Oswald', sans-serif;
+            font-size: 50px;
+            text-align: left;
+            line-height: 47px;
+            font-weight: bold;
+            // background-color: blue;
+            margin: 0;
+        }
+    
+        &-jobtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 30px;
+            text-align: left;
+            font-weight: bold;
+            // background-color: purple;
+            margin: 0;
+        }
+    }
+    
+}

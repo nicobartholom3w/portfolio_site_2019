@@ -1,52 +1,59 @@
+$font-main: 'Montserrat', sans-serif;
+$font-secondary: 'Istok Web', sans-serif;
+$cream: rgb(248, 243, 242);
+$peach-light: rgb(245, 214, 211);
+$peach-dark: rgb(244, 186, 180);
+$indigo-dark: rgb(26, 44, 139);
+$content-maxwidth: 64rem;
+
 .site {    
     height: 100%;
     width: 100%;
+
+    // &__container {
+    //     height: 100%;
+    //     width: 100%;
+    //     display: block;
+    // }
 }
 
-.header {
-    background-color: #337569;
-    // background-color: #F19C86;
-    height: 15rem;
+.title {
+    background-color: $peach-dark;
     width: 100%;
-    color: white;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
+    color: $indigo-dark;
+    display: inline-block;
 
-    &__decoline {
-        background: #DA3556;
-        height: 9rem;
-        width: .25rem;
-        position: relative;
-        right: .5rem;
-        
+    &__container {
+        height: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 1.25rem 1.75rem 1.25rem 1.75rem;
+        margin: auto;
+        display: inline-block;
     }
-
     &__text {
-        height: 9rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        // background-color: pink;
+        float: left;
 
         &-name {
-            font-family: 'Oswald', sans-serif;
-            font-size: 50px;
+            font-family: $font-main;
+            font-weight: 900;
+            font-size: 2.25rem;
             text-align: left;
-            line-height: 47px;
-            font-weight: bold;
-            // background-color: blue;
             margin: 0;
         }
-    
+        
+        &-container {
+            font-family: $font-secondary;
+        }
+
         &-jobtitle {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 30px;
             text-align: left;
-            font-weight: bold;
-            // background-color: purple;
+            font-weight: 700;
+            font-size: 1.75rem;
+            line-height: 1.75rem;
             margin: 0;
+            // background-color: rgba(0, 0, 0, .2);
         }
     }
     

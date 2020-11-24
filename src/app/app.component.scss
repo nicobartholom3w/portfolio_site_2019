@@ -7,26 +7,30 @@ $peach-dark: rgb(244, 186, 180);
 $blue-light: rgb(154, 219, 229);
 $blue-medium: rgb(65, 179, 197);
 $indigo-dark: rgb(26, 44, 139);
-
-$content-maxwidth: 34rem;
+$width-left: 14.5rem;
+$width-right-max: 30.85rem;
+$margin-left: 1.85rem;
+$content-maxwidth: 47.2rem;
 
 .site {    
     height: 100%;
     min-width: 100%;
+    // &__container {
+    //     max-width: $content-maxwidth;
+    // }
 }
 
 .title {
     background-color: $peach-dark;
     min-width: 100%;
+    height: 8rem;
     color: $indigo-dark;
-
     &__container {
         height: 100%;
-        min-width: 100%;
-        box-sizing: border-box;
+        max-width: $content-maxwidth;
+        background-color: purple;
         padding: 1.25rem 1.75rem 1.25rem 1.75rem;
         margin: auto;
-        display: inline-block;
     }
 
     &__text {
@@ -63,8 +67,9 @@ $content-maxwidth: 34rem;
     padding: 0 1.75rem 0 1.75rem;
     box-sizing: border-box;
     background-color: $indigo-dark;
-
     &__container {
+        max-width: $content-maxwidth;
+        margin: auto;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -164,21 +169,31 @@ $content-maxwidth: 34rem;
 .about {
     background-color: $cream;
     color: $indigo-dark;
+    box-sizing: border-box;
     padding: 0 1.75rem 0 1.75rem;
+    box-sizing: border-box;
+    
     &__container {
+        max-width: $content-maxwidth;
+        // padding: 0 1.75rem 0 1.75rem;
+        background-color: teal;
         display: flex;
 
+        &-left {
+            max-width: $width-left;
+        }
         &-right {
-            margin-left: 1.85rem;
+            margin-left: $margin-left;
         }
     }
 
     &__img {
         height: 100%;
-        width: auto;
+        width: 100%;
         &-container {
-            height: 19rem;
-            width: auto; 
+            // height: 19rem;
+            height: auto;
+            width: $width-left; 
             margin-top: 6rem;
         }
     }
@@ -219,9 +234,8 @@ $content-maxwidth: 34rem;
 
 .portfolio {
     background-color: $peach-light;
-    
+    padding: 0 1.75rem 0 1.75rem;
     &__container {
-        
         
     }
 
@@ -235,15 +249,90 @@ $content-maxwidth: 34rem;
 
 .interests {
     background-color: $cream;
-
+    color: $indigo-dark;
+    padding: 0 1.75rem 0 1.75rem;
     &__container {
 
     }
 
     &__title {
         margin: 0;
+        font-family: $font-main;
+
+    }
+
+    &__content {
+        &-title {
+            font-family: $font-main;
+        }
+
+        &-left {
+            max-width: $width-left;
+            min-width: $width-left;
+            background-color: purple;
+        }
+
+        &-right {
+            margin-left: $margin-left;
+            min-width: $width-left;
+            max-width: $width-right-max;
+            background-color: blue;
+        }
+        &-info {
+
+        }
+
+        &-container {
+            display: flex;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        &-container {
+            min-width: $width-left;
+            max-width: $width-right-max;
+            height: auto;
+            
+        }
     }
 }
+
+
+.li {
+    &__title {
+        font-family: $font-main;
+        font-weight: 700;
+        font-size: .75rem;
+        padding: .25rem 0;
+
+        &-ul {
+            list-style: outside;
+            padding-left: 1.15rem;
+
+        }
+    }
+
+    &__regular {
+        font-family: $font-secondary;
+        font-size: .75rem;
+       
+
+        &-ul {
+            list-style: outside;
+            padding-left: 1rem;
+            list-style-type: circle;
+        }
+
+        &-right {
+            list-style: outside;
+            padding-left: 1.15rem;
+            font-size: 1.15rem;
+        }
+    }
+}
+
 
 .footer {
     font-family: $font-secondary;

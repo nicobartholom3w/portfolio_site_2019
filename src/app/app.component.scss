@@ -28,7 +28,6 @@ $content-maxwidth: 47.2rem;
     &__container {
         height: 100%;
         max-width: $content-maxwidth;
-        background-color: purple;
         padding: 1.25rem 1.75rem 1.25rem 1.75rem;
         margin: auto;
     }
@@ -62,7 +61,7 @@ $content-maxwidth: 47.2rem;
 
 .header {
     width: 100%;
-    min-height: 3.25rem;
+    height: 2.5rem;
     box-sizing: border-box;
     padding: 0 1.75rem 0 1.75rem;
     box-sizing: border-box;
@@ -86,19 +85,21 @@ $content-maxwidth: 47.2rem;
     &__name {
         font-family: $font-main;
         font-weight: 700;
-        font-size: 1.25rem;
-        padding: 1rem .15rem .75rem 0;
+        font-size: 1rem;
     }
 
     &__icon {
-        padding: .5rem;
+        padding: .25rem;
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 26px;
+        height: 26px;
         &-container {
-            min-width: 10rem;
+            min-width: 7rem;
+            padding-left: .45rem;
             display: flex;
-            justify-content: center;
+            justify-content: space-evenly;
             align-items: center;
         }
         &-fill {
@@ -141,7 +142,7 @@ $content-maxwidth: 47.2rem;
         &-ref {
             font-family: $font-main;
             font-weight: 600;
-            font-size: .85rem;
+            font-size: .75rem;
             color: $cream;
             text-decoration: none;
             padding: .5rem;
@@ -166,17 +167,18 @@ $content-maxwidth: 47.2rem;
     }
 }
 
+.main {
+    width: 100%;
+}
+
 .about {
     background-color: $cream;
     color: $indigo-dark;
-    box-sizing: border-box;
-    padding: 0 1.75rem 0 1.75rem;
-    box-sizing: border-box;
     
     &__container {
+        margin: auto;
         max-width: $content-maxwidth;
-        // padding: 0 1.75rem 0 1.75rem;
-        background-color: teal;
+        padding: 0 1.75rem 1.5rem 1.75rem;
         display: flex;
 
         &-left {
@@ -194,7 +196,7 @@ $content-maxwidth: 47.2rem;
             // height: 19rem;
             height: auto;
             width: $width-left; 
-            margin-top: 6rem;
+            margin-top: 5rem;
         }
     }
     &__title {
@@ -202,7 +204,7 @@ $content-maxwidth: 47.2rem;
         font-weight: 800;
         display: flex;
         align-items: center;
-        height: 6rem;
+        height: 5rem;
         margin: 0;
         &-sub {
             font-family: $font-main;
@@ -225,18 +227,41 @@ $content-maxwidth: 47.2rem;
             font-size: .75rem;
             margin: .25rem 0;
         }
+
+        &-container {
+            // background-color: purple;
+            height: 19.25rem;
+        }
     }
 
     &__button {
+        border: none;
+        font-family: $font-main;
+        font-weight: 600;
+        color: $cream;
+        background-color: $indigo-dark;
+        padding: .5rem;
+        transition: all .3s;
+        cursor: pointer;
 
+        &:hover {
+            color: $blue-light;
+            box-shadow: 0 2px 3px 1px rgba(26, 44, 80, .5);
+        }
+
+        &:focus {
+            color: $blue-light;
+            box-shadow: 0 2px 3px 1px rgba(26, 44, 80, .5);
+        }
     }
 }
 
 .portfolio {
     background-color: $peach-light;
-    padding: 0 1.75rem 0 1.75rem;
     &__container {
-        
+        margin: auto;
+        max-width: $content-maxwidth;
+        padding: 0 1.75rem 0 1.75rem;
     }
 
     &__title {
@@ -250,9 +275,10 @@ $content-maxwidth: 47.2rem;
 .interests {
     background-color: $cream;
     color: $indigo-dark;
-    padding: 0 1.75rem 0 1.75rem;
     &__container {
-
+        margin: auto;
+        max-width: $content-maxwidth;
+        padding: 0 1.75rem 0 1.75rem;
     }
 
     &__title {
@@ -333,11 +359,26 @@ $content-maxwidth: 47.2rem;
     }
 }
 
+footer {
+    width: 100%;
+    height: 2.5rem;
+}
 
 .footer {
     font-family: $font-secondary;
-    font-size: .5rem;
-    padding: .75rem 0 .75rem 1.75rem;
+    font-size: .6rem;
     color: $cream;
-    background-color: $indigo-dark;
+    height: 100%;
+    margin: auto;
+    max-width: $content-maxwidth;
+    min-width: 100%;
+    padding: 0 1.9rem;
+    box-sizing: border-box;
+
+    &__container {
+        min-height: 100%;
+        background-color: $indigo-dark;
+        min-width: 100%;
+        display: flex;
+    }
 }

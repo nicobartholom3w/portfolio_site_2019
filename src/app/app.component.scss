@@ -2,11 +2,13 @@ $font-main: 'Montserrat', sans-serif;
 $font-secondary: 'Istok Web', sans-serif;
 $cream: rgb(248, 243, 242);
 $peach-extralight: rgb(248, 220, 220);
-$peach-light: rgb(245, 214, 211);
-$peach-dark: rgb(244, 186, 180);
+$peach-light: rgb(244, 209, 204);
+// $peach-dark: rgb(244, 186, 180);
+$peach-dark: rgb(243, 177, 171);
 $blue-light: rgb(154, 219, 229);
 $blue-medium: rgb(65, 179, 197);
 $indigo-dark: rgb(26, 44, 139);
+// rgb(244, 205, 206)
 $width-left: 14.5rem;
 $width-right-max: 30.85rem;
 $margin-left: 1.85rem;
@@ -24,19 +26,23 @@ $section-container-padding: 0 1.75rem 2.5rem 1.75rem;
 
 .title {
     background-color: $peach-dark;
-    min-width: 100%;
     height: 8rem;
     color: $indigo-dark;
+    position: relative;
+    z-index: -2;
     &__container {
         height: 100%;
         max-width: $content-maxwidth;
         padding: 1.25rem 1.75rem 1.25rem 1.75rem;
         margin: auto;
+        
+        
     }
 
     &__text {
         float: left;
         width: 17.35rem;
+        // text-shadow: 0 0px 1px rgba(26, 44, 80, .5);
 
         &-name {
             font-family: $font-main;
@@ -44,6 +50,7 @@ $section-container-padding: 0 1.75rem 2.5rem 1.75rem;
             font-size: 1.7rem;
             text-align: left;
             margin: 0;
+            
         }
         
         &-container {
@@ -401,5 +408,79 @@ footer {
         height: 100%;
         width: 100%;
         background-color: $indigo-dark;
+    }
+}
+
+.dot {
+    height: 11rem;
+    width: 11rem;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 10;
+    box-shadow: 0 1px 3px 1px rgba(26, 44, 80, .15);
+
+    &__container {
+        position: fixed;
+        z-index: -1;
+        height: 8rem;
+        overflow: hidden;
+        width: 100%;
+    }
+
+    &__relative {
+        position: relative;
+        height: 8rem;
+        z-index: -1;
+    }
+
+    &__title {
+        background-color: $peach-light;
+        &-top {
+            bottom: 4rem;
+            &1 {
+                left: 5rem;
+            }
+            
+            &2 {
+                left: 25rem;
+            }
+
+            &3 {
+                left: 45rem;
+            }
+
+            &4 {
+                left: 65rem;
+            }
+
+            &5 {
+                left: 85rem;
+            }
+            
+        }
+
+        &-bottom {
+            top: 4rem;
+            &1 {
+                margin-left: -5rem;
+            }
+
+            &2 {
+                left: 15rem;
+            }
+
+            &3 {
+                left: 35rem;
+            }
+
+            &4 {
+                left: 55rem;
+            }
+
+            &5 {
+                left: 75rem;
+            }
+        }
+
     }
 }

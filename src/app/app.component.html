@@ -1,12 +1,37 @@
 <div class="site">
   <div class="site__container">
-    <div class="title">
-        <div class="dot__container">
-          <div class="dot__relative">
+    <div class="dot__container dot__container-main">
+      <div class="dot__relative dot__relative-main">
+        <div class="dot dot__main dot__main-top dot__main-column-a1 dot__main-row1"></div>
+        <div class="dot dot__main dot__main-top dot__main-column-a2 dot__main-row2"></div>
+        <div class="dot dot__main dot__main-top dot__main-column-a3 dot__main-row3"></div>
+        <div class="dot dot__main dot__main-top dot__main-column-a4 dot__main-row4"></div>
+        <div class="dot dot__main dot__main-top dot__main-column-a5 dot__main-row5"></div>
+        <div class="dot dot__main dot__main-top dot__main-column-b1 dot__main-row1"></div>
+        <div class="dot dot__main dot__main-top dot__main-column-b2 dot__main-row2"></div>
+        <div class="dot dot__main dot__main-top dot__main-column-b3 dot__main-row3"></div>
+        <div class="dot dot__main dot__main-top dot__main-column-b4 dot__main-row4"></div>
+        <div class="dot dot__main dot__main-top dot__main-column-b5 dot__main-row5"></div>
+        <div class="dot dot__main dot__main-top dot__main-column-a1 dot__main-row1"></div>
+        <div class="dot dot__main dot__main-top dot__main-column-a2 dot__main-row2"></div>
+        <div class="dot dot__main dot__main-top dot__main-column-a3 dot__main-row3"></div>
+        <div class="dot dot__main dot__main-top dot__main-column-a4 dot__main-row4"></div>
+        <div class="dot dot__main dot__main-top dot__main-column-a5 dot__main-row5"></div>
+        <div class="dot dot__main dot__main-top dot__main-column-b1 dot__main-row1"></div>
+        <div class="dot dot__main dot__main-top dot__main-column-b2 dot__main-row2"></div>
+        <div class="dot dot__main dot__main-top dot__main-column-b3 dot__main-row3"></div>
+        <div class="dot dot__main dot__main-top dot__main-column-b4 dot__main-row4"></div>
+        <div class="dot dot__main dot__main-top dot__main-column-b5 dot__main-row5"></div>
+      </div>
+    </div>
+    <div #title class="title">
+        <div class="dot__container dot__container-title">
+          <div class="dot__relative dot__relative-title">
             <div class="dot dot__title dot__title-top dot__title-top1"></div>
             <div class="dot dot__title dot__title-top dot__title-top2"></div>
             <div class="dot dot__title dot__title-top dot__title-top3"></div>
             <div class="dot dot__title dot__title-top dot__title-top4"></div>
+            <div class="dot dot__title dot__title-top dot__title-top5"></div>
             <div class="dot dot__title  dot__title-bottom dot__title-bottom1"></div>
             <div class="dot dot__title dot__title-bottom dot__title-bottom2"></div>
             <div class="dot dot__title dot__title-bottom dot__title-bottom3"></div>
@@ -91,8 +116,11 @@
         </div>
       </div>
     </div>
-
+    
     <div class="main">
+
+      
+
       <div class="about">
         <div class="about__container">
           <div class="about__container-left">
@@ -106,16 +134,23 @@
               <h3 class="about__title-sub">Hi, I'm Nico!</h3>
               <h4 class="about__content-title">I can help if you need...</h4>
               <ul class="about__content-info">
-                <li>a front-end focused software engineer passionate about responsive & easy to use applications.</li>
-                <li>strong proficiency & speed of development in web associated technologies (JS/TS/HTML/CSS).</li>
-                <li>pixel perfect web designs & promotional materials using Adobe Photoshop/Illustrator & Sketch.</li>
-                <li>someone to break complex tasks down & make them manageable.</li>
+                <li>a front-end focused software engineer.</li>
+                <li>responsive & intuitive UX/UI design.</li>
+                <li>strong proficiency & speed of development in web associated technologies.</li>
+                <ul class="about__li">
+                  <li>JS/TS/HTML/CSS</li>
+                </ul>
+                <li>pixel perfect web & promotional designs.</li>
+                <ul class="about__li">
+                  <li>Adobe Photoshop/Illustrator & Sketch</li>
+                </ul>
               </ul>
               <h4 class="about__content-title">I am...</h4>
               <ul class="about__content-info">
-                <li>a software engineer & artist.</li>
+                <li>a software engineer & designer.</li>
+                <li>a practiced artist of many mediums.</li>
                 <li>creative & curious.</li>
-                <li>constantly searching for ways to broaden my perspective & grow. </li>
+                <!-- <li>dedicated to broadening horizons</li> -->
               </ul>
             </div>
             <button href="mailto:nicobartholomew@gmail.com" class="about__button">Contact Me!</button>
@@ -128,9 +163,21 @@
           <h2 class="portfolio__title">Portfolio</h2>
           <div class="portfolio__main">
             <div class="portfolio__main-items">
-              <app-portfolio-item></app-portfolio-item>
-              <app-portfolio-item></app-portfolio-item>
-              <app-portfolio-item></app-portfolio-item>
+              <div class="portfolio__link-container">
+                <a href="" class="portfolio__link">
+                  <app-portfolio-item></app-portfolio-item>
+                </a>
+              </div>
+              <div class="portfolio__link-container">
+                <a href="" class="portfolio__link">
+                  <app-portfolio-item></app-portfolio-item>
+                </a>
+              </div>
+              <div class="portfolio__link-container">
+                <a href="" class="portfolio__link">
+                  <app-portfolio-item></app-portfolio-item>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -144,25 +191,27 @@
               <h3 class="interests__content-title">Highlights</h3>
               <ul class="interests__content-info li__title-ul">
                 <li class="li__title">coffee & curry forever</li>
-                <ul class="li__regular-ul"><li class="li__regular">home brewed specialties: aeropress coffee & Japanese curry</li></ul>
+                <ul class="li__regular-ul"><li class="li__regular li-small">home brewed specialties: aeropress coffee & Japanese curry</li></ul>
                 <li class="li__title">pottery & illustration</li>
-                <ul class="li__regular-ul"><li class="li__regular">took up pottery to create my own mugs for my coffee time aesthetic</li></ul>
+                <ul class="li__regular-ul"><li class="li__regular li-small">throw my own mugs for personalized coffee-time aesthetic</li></ul>
                 <li class="li__title">anime & video games</li>
-                <ul class="li__regular-ul"><li class="li__regular">living the high life with crunchyroll & my nintendo switch</li></ul>
+                <ul class="li__regular-ul"><li class="li__regular li-small">living the high life with crunchyroll & my nintendo switch</li></ul>
                 <li class="li__title">karaoke queen</li>
-                <ul class="li__regular-ul"><li class="li__regular">planned staff karaoke nights while living in japan</li></ul>
-                <li class="li__title">designing, costuming, & stitching</li>
-                <ul class="li__regular-ul"><li class="li__regular">love to design & create original apparel</li></ul>
+                <ul class="li__regular-ul"><li class="li__regular li-small">a full repertoire of both English & Japanese songs</li></ul>
+                <li class="li__title">costuming & stitching</li>
+                <ul class="li__regular-ul"><li class="li__regular li-small">love to design & create original apparel</li></ul>
               </ul>
             </div>
             <div class="interests__content-right">
               <h3 class="interests__content-title">Volunteer Work</h3>
-              <ul class="interests__content-info li__regular-right">
-                <li class="li__regular">In 2018, my love for rabbits led me to find Wisconsin House Rabbit Society, a 100% volunteer run rabbit rescue.</li>
-                <li class="li__regular">I design & create promotional materials for WHRS in addition to caring for the rescue rabbits & organizing fundraisers.</li>
-              </ul>
-              <div class="interests__img-container">
-                <img class="interests__img" src="/assets/img/hrs_rabbits.png" alt="">
+              <div class="interests__content-flex">
+                <ul class="interests__content-info li__regular-right">
+                  <li class="li__regular">In 2018, my love for rabbits led me to find Wisconsin House Rabbit Society, a 100% volunteer run rabbit rescue.</li>
+                  <li class="li__regular">I design & create promotional materials for WHRS in addition to caring for rescue rabbits & organizing fundraisers.</li>
+                </ul>
+                <div class="interests__img-container">
+                  <img class="interests__img" src="/assets/img/hrs_rabbits.png" alt="">
+                </div>
               </div>
             </div>
           </div>

@@ -19,30 +19,35 @@ $section-container-padding: 0 1.75rem 2.5rem 1.75rem;
 .site {    
     height: 100%;
     min-width: 100%;
-    // &__container {
-    //     max-width: $content-maxwidth;
-    // }
+    &__container {
+        // max-width: $content-maxwidth;
+        height: 100%;
+        width: 100%;
+        position: relative;
+        // z-index: -10;
+    }
 }
 
 .title {
-    background-color: $peach-dark;
+    
     height: 8rem;
     color: $indigo-dark;
     position: relative;
-    z-index: -2;
+    // z-index: -2;
     &__container {
         height: 100%;
         max-width: $content-maxwidth;
         padding: 1.25rem 1.75rem 1.25rem 1.75rem;
         margin: auto;
-        
-        
+        position: absolute;
+        top: 0;
+        // z-index: 100;
     }
 
     &__text {
         float: left;
         width: 17.35rem;
-        // text-shadow: 0 0px 1px rgba(26, 44, 80, .5);
+        // text-shadow: 0 0px 1px rgba(26, 44, 80, .git 5);
 
         &-name {
             font-family: $font-main;
@@ -75,6 +80,7 @@ $section-container-padding: 0 1.75rem 2.5rem 1.75rem;
     padding: 0 1.75rem 0 1.75rem;
     box-sizing: border-box;
     background-color: $indigo-dark;
+    z-index: 10;
     &__container {
         max-width: $content-maxwidth;
         margin: auto;
@@ -178,12 +184,22 @@ $section-container-padding: 0 1.75rem 2.5rem 1.75rem;
 
 .main {
     width: 100%;
+    height: 100%;
+    
+    z-index: 10;
+    position: relative;
 }
 
 .about {
     background-color: $cream;
     color: $indigo-dark;
     
+    &__span {
+        &:before {
+            content: '\A';
+            white-space: pre;
+        }
+    }
     &__container {
         margin: auto;
         max-width: $content-maxwidth;
@@ -194,11 +210,11 @@ $section-container-padding: 0 1.75rem 2.5rem 1.75rem;
             max-width: $width-left;
         }
         &-right {
-            margin-top: -2px;
+            
             margin-left: $margin-left;
             min-width: $width-left;
             max-width: $width-right-max;
-            
+
         }
     }
 
@@ -219,34 +235,57 @@ $section-container-padding: 0 1.75rem 2.5rem 1.75rem;
         align-items: center;
         height: $title-height;
         margin: 0;
+        
         &-sub {
             font-family: $font-main;
+            font-size: 1rem;
             font-weight: 700;
             margin:0;
             padding: 0;
+            padding-bottom: .25rem;
         }
     }
 
+    &__li {
+        list-style: outside;
+        padding-left: 1rem;
+        list-style-type: circle;
+    }
     &__content {
         
         &-title {
             font-family: $font-main;
+            font-size: .9rem;
             font-weight: 700;
-            margin: .75rem 0;
+            // padding: .25rem 0;
+            // padding: 0;
+            margin: .5rem 0 .25rem;
         }
 
         &-info {
             font-family: $font-secondary;
-            font-size: .75rem;
-            margin: .25rem 0;
-            font-size: .72rem;
+            list-style: outside;
+            padding-left: 1.15rem;
+            
+            // font-size: .75rem;
+            // padding-bottom: 0;
+            // padding-top: 0;
+            // margin: 0;
+            // margin: .25rem 0;
+            font-size: .7rem;
         }
 
         &-container {
-            height: 19.25rem;
+            min-height: 19.4rem;
+            margin-top: -2px;
+
+            // max-height: 20.5rem;
+            max-height: 19.4rem;
+            // background-color: purple;
         }
     }
 
+   
     &__button {
         border: none;
         font-family: $font-main;
@@ -271,11 +310,12 @@ $section-container-padding: 0 1.75rem 2.5rem 1.75rem;
 }
 
 .portfolio {
-    background-color: $peach-light;
+    // background-color: $peach-light;
     &__container {
         margin: auto;
         max-width: $content-maxwidth;
         padding: $section-container-padding;
+        padding-bottom: 1rem;
     }
 
     &__title {
@@ -287,13 +327,23 @@ $section-container-padding: 0 1.75rem 2.5rem 1.75rem;
         height: $title-height;
         display: flex;
         align-items: center;
-        // justify-content: center;
     }
 
     &__main {
-
+        height: 100%;
+        width: 100%;
         &-items {
-            display: flex;
+            height: 100%;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 16.35rem 16.35rem 16.35rem;
+        }
+    }
+
+    &__link {
+     
+        &-container {
+            padding-bottom: 1.85rem; 
         }
     }
 }
@@ -321,11 +371,15 @@ $section-container-padding: 0 1.75rem 2.5rem 1.75rem;
     &__content {
         &-title {
             font-family: $font-main;
+            padding-bottom: 1rem;
+            margin: 0;
+            // background-color: pink;
         }
 
         &-left {
             max-width: $width-left;
             min-width: $width-left;
+
         }
 
         &-right {
@@ -333,58 +387,90 @@ $section-container-padding: 0 1.75rem 2.5rem 1.75rem;
             min-width: $width-left;
             max-width: $width-right-max;
         }
-        &-info {
 
+        &-info {
+            // background-color: teal;
+            margin-top: 0;
         }
 
         &-container {
             display: flex;
+            margin-top: -2px;
+        }
+
+        &-flex {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 20rem;
         }
     }
 
     &__img {
-        width: 100%;
-        height: 100%;
-        &-container {
             min-width: $width-left;
             max-width: $width-right-max;
-            height: auto;
+            // min-height: 16rem;
+            min-height: auto;
+            object-fit: fill;
+        &-container {
+            overflow: hidden;
+            // height: auto;
             
         }
     }
 }
 
+li {
+    // height: 2rem;
+    // background-color: pink;
+    margin: .25rem 0;
+}
 
 .li {
+   
+    
     &__title {
         font-family: $font-main;
         font-weight: 700;
-        font-size: .75rem;
-        padding: .25rem 0;
-
+        font-size: .8rem;
+        padding: .25rem 0 .15rem 0;
+        // line-height: 1rem;
         &-ul {
             list-style: outside;
             padding-left: 1.15rem;
-
+            
         }
     }
 
     &__regular {
         font-family: $font-secondary;
-        font-size: .75rem;
-       
-
+        font-size: .7rem;
+        // margin-bottom: .75rem;
+        // line-height: 1rem;
+        height: 3rem;
+        // background-color: pink;
         &-ul {
             list-style: outside;
             padding-left: 1rem;
             list-style-type: circle;
+            
         }
 
         &-right {
             list-style: outside;
             padding-left: 1.15rem;
-            font-size: 1.15rem;
+            padding-top: 4px;
+            padding-bottom: 0;
+            margin-bottom: 0;
+            // background-color: purple;
         }
+    }
+
+    &-small {
+        font-size: .7rem;  
+        height: auto;
+        margin-bottom: .6rem;
+        // line-height: .85rem;  
     }
 }
 
@@ -416,21 +502,35 @@ footer {
     width: 11rem;
     border-radius: 50%;
     position: absolute;
-    z-index: 10;
+    // z-index: 10;
     box-shadow: 0 1px 3px 1px rgba(26, 44, 80, .15);
 
     &__container {
-        position: fixed;
-        z-index: -1;
-        height: 8rem;
         overflow: hidden;
         width: 100%;
+        // position: fixed;
+        position: fixed;
+        z-index: -1;
+        &-title {
+            height: 8rem;
+            background-color: $peach-dark;
+        }
+        
+        &-main {
+            min-height: 100%;
+            background-color: $peach-light;
+            z-index: -10;
+            position: fixed;
+        }
     }
 
     &__relative {
         position: relative;
-        height: 8rem;
         z-index: -1;
+        &-title {
+            height: 8rem;
+        }
+        
     }
 
     &__title {
@@ -438,7 +538,7 @@ footer {
         &-top {
             bottom: 4rem;
             &1 {
-                left: 5rem;
+                left: 5rem; 
             }
             
             &2 {
@@ -483,4 +583,115 @@ footer {
         }
 
     }
+
+    &__main {
+        background-color: $peach-dark;
+        &-row {
+            &1 {
+                // bottom: 10rem;
+            }
+            &2 {
+                // bottom: 20rem;
+            }
+            &3{ 
+
+            }
+            &4 {
+
+            }
+            &5 {
+
+            }
+        }
+
+        &-column {
+            &-a {
+                &1 {
+                    margin-left: -5rem;
+                }
+    
+                &2 {
+                    left: 15rem;
+                }
+    
+                &3 {
+                    left: 35rem;
+                }
+    
+                &4 {
+                    left: 55rem;
+                }
+    
+                &5 {
+                    left: 75rem;
+                }
+            }
+
+            &-b {
+                &1 {
+                    left: 5rem; 
+                }
+                
+                &2 {
+                    left: 25rem;
+                }
+    
+                &3 {
+                    left: 45rem;
+                }
+    
+                &4 {
+                    left: 65rem;
+                }
+    
+                &5 {
+                    left: 85rem;
+                }
+            }
+            
+        }
+    }
 }
+
+// @media only screen and (max-width: 715px) {
+//     .about {
+
+//         &__title {
+
+//             &-sub {
+//                 font-size: 1rem;
+//             }
+//         }
+
+//         &__content {
+//             &-title {
+//                 font-size: .85rem;
+//             }
+//             &-info {
+//                 font-size: .65rem;
+//             }
+//         }
+//     }
+// }
+
+
+// @media only screen and (max-width: 500px) {
+//     .about {
+
+//         &__title {
+
+//             &-sub {
+//                 font-size: 1rem;
+//             }
+//         }
+
+//         &__content {
+//             &-title {
+//                 font-size: .85rem;
+//             }
+//             &-info {
+//                 font-size: .6rem;
+//             }
+//         }
+//     }
+// }

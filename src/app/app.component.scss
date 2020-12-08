@@ -81,14 +81,14 @@ $section-container-padding: 0 1.75rem 2.5rem 1.75rem;
     box-sizing: border-box;
     background-color: $indigo-dark;
     z-index: 10;
-
+    position: sticky;
     &__container {
         max-width: $content-maxwidth;
         margin: auto;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
         height: 100%;
         color: $cream;
         &-left {
@@ -96,23 +96,27 @@ $section-container-padding: 0 1.75rem 2.5rem 1.75rem;
             align-items: center;
             // flex-wrap: wrap;
             width: $width-left;
-            
+            margin-right: 1.83rem;
         }
 
         &-right {
-            width: $width-left;
+            min-width: $width-left;
+            max-width: $width-right-max;
             display: flex;
             // align-items: center;
             justify-content: flex-end;
             height: 100%;
-            // background-color: teal;
         }
     }
 
     &__name {
         font-family: $font-main;
+        min-width: 8.5rem;
+        // width: 8rem;
+        flex-wrap: nowrap;
         font-weight: 700;
-        font-size: .85rem;
+        font-size: .83rem;
+        padding-right: .1rem;
     }
 
     &__icon {
@@ -192,7 +196,6 @@ $section-container-padding: 0 1.75rem 2.5rem 1.75rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            // background-color: pink;
 
         }
     }
@@ -221,12 +224,11 @@ $section-container-padding: 0 1.75rem 2.5rem 1.75rem;
         max-width: $content-maxwidth;
         padding: $section-container-padding;
         display: flex;
-
+        
         &-left {
             max-width: $width-left;
         }
         &-right {
-            
             margin-left: $margin-left;
             min-width: $width-left;
             max-width: $width-right-max;
@@ -297,7 +299,6 @@ $section-container-padding: 0 1.75rem 2.5rem 1.75rem;
 
             // max-height: 20.5rem;
             max-height: 19.4rem;
-            // background-color: purple;
         }
     }
 
@@ -391,7 +392,6 @@ $section-container-padding: 0 1.75rem 2.5rem 1.75rem;
             font-family: $font-main;
             padding-bottom: 1rem;
             margin: 0;
-            // background-color: pink;
         }
 
         &-left {
@@ -407,7 +407,6 @@ $section-container-padding: 0 1.75rem 2.5rem 1.75rem;
         }
 
         &-info {
-            // background-color: teal;
             margin-top: 0;
         }
 
@@ -450,7 +449,6 @@ $section-container-padding: 0 1.75rem 2.5rem 1.75rem;
 
 li {
     // height: 2rem;
-    // background-color: pink;
     margin: .25rem 0;
 }
 
@@ -476,7 +474,6 @@ li {
         // margin-bottom: .75rem;
         // line-height: 1rem;
         height: 3rem;
-        // background-color: pink;
         &-ul {
             list-style: outside;
             padding-left: 1rem;
@@ -490,7 +487,6 @@ li {
             padding-top: 4px;
             padding-bottom: 0;
             margin-bottom: 0;
-            // background-color: purple;
         }
     }
 

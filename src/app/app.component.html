@@ -24,7 +24,10 @@
         <div class="dot dot__main dot__main-top dot__main-column-b5 dot__main-row5"></div>
       </div>
     </div>
-    <div #title class="title">
+    <div 
+      #nameTitle 
+      class="title"
+      [class.sticky]="isHeaderSticky">
         <div class="dot__container dot__container-title">
           <div class="dot__relative dot__relative-title">
             <div class="dot dot__title dot__title-top dot__title-top1"></div>
@@ -52,7 +55,9 @@
     </div>
 
 
-    <div class="header">
+    <div 
+      class="header"
+      [class.sticky-header]="isHeaderSticky">
       <div class="header__container max-width">
         <div class="header__container-left">
           <div class="header__name">Nico Bartholomew</div>

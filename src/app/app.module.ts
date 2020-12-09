@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PortfolioItemComponent } from './portfolio-item/portfolio-item.component';
+import { TabHeaderDirective } from './directives/tab-header.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PortfolioItemComponent
+    PortfolioItemComponent,
+    TabHeaderDirective
   ],
   imports: [
     BrowserModule,

@@ -61,10 +61,10 @@
     </div>
     <a #about id="about" class="anchor"></a>
     <div class="nav">
-      <div 
+      <!-- <div 
           class="header header__filler"
           [class.header__filler-sticky]="isHeaderSticky"
-          ></div>
+          ></div> -->
       <div 
         class="header"
         [class.sticky-header]="isHeaderSticky">
@@ -124,24 +124,32 @@
           <div class="header__container-right">
             <div class="header__section-container">
               <a 
-                routerLink="#about"
-                (click)="onPageNavigate(about)"
-                class="header__section-ref">
+                routerLink=""
+                appTabHeader
+                (click)="onPageNavigate(about, $event)"
+                class="header__section-ref"
+                >
                 <div 
-                  
+                  [class.section-active]="sectionArr[0].isSectionActive"
                   class="header__section">About Me</div>
               </a>
               <a 
-                routerLink="#portfolio"
+                routerLink=""
+                appTabHeader
                 class="header__section-ref"
                 (click)="onPageNavigate(portfolio)">
-                <div class="header__section">Portfolio</div>
+                <div 
+                  [class.section-active]="sectionArr[1].isSectionActive"
+                  class="header__section">Portfolio</div>
               </a>
               <a 
-                routerLink="#interests"
+                routerLink=""
+                appTabHeader
                 class="header__section-ref"
                 (click)="onPageNavigate(interests)">
-                <div class="header__section">Interests</div>
+                <div
+                  [class.section-active]="sectionArr[2].isSectionActive" 
+                  class="header__section">Interests</div>
               </a>
             </div>
           </div>
@@ -201,9 +209,8 @@
           <div class="portfolio__main">
             <a #interests id="interests" class="anchor anchor-interests"></a>
             <div class="portfolio__main-items">
-              
               <div class="portfolio__link-container max-width">
-                <a href="" class="portfolio__link">
+                <a href="https://github.com/nicobartholom3w" class="portfolio__link">
                   <app-portfolio-item></app-portfolio-item>
                 </a>
               </div>
@@ -258,11 +265,12 @@
           </div>
         </div>
       </div>
+      <footer>
+        <div class="footer__container">
+          <div class="footer max-width">&copy;NicoBartholomew</div>
+        </div>
+      </footer>
     </div>
-    <footer>
-      <div class="footer__container">
-        <div class="footer max-width">&copy;NicoBartholomew</div>
-      </div>
-    </footer>
+  
   </div>
 </div>

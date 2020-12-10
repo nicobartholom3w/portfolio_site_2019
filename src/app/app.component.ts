@@ -14,7 +14,6 @@ export class AppComponent {
   @ViewChild ('about', {static: true}) about: ElementRef;
   @ViewChild ('portfolio', {static: true}) portfolio: ElementRef;
   @ViewChild ('interests', {static: true}) interests: ElementRef;
-  @ViewChildren (TabHeaderDirective, { read: ElementRef }) appTabHeaders: QueryList<ElementRef>;
   @HostListener ('window:scroll', ['$event'])
     onWindowScroll(event) {
       let nameTitleRect: ClientRect = this.nameTitle.nativeElement.getBoundingClientRect();
@@ -26,29 +25,17 @@ export class AppComponent {
       }
 
       if(this.interests.nativeElement.getBoundingClientRect().top <= 200) {
-        this.sectionArr[2].isSectionActive = true;
-        this.sectionArr[0].isSectionActive = false;
-        this.sectionArr[1].isSectionActive = false;
+        this.highlightSectionName(2);
       }
       else if(this.portfolio.nativeElement.getBoundingClientRect().top <= 200) {
-        this.sectionArr[1].isSectionActive = true;
-        this.sectionArr[0].isSectionActive = false;
-        this.sectionArr[2].isSectionActive = false;
+        this.highlightSectionName(1);
       }
       else if(this.about.nativeElement.getBoundingClientRect().top <= 5) {
-        this.sectionArr[0].isSectionActive = true;
-        this.sectionArr[1].isSectionActive = false;
-        this.sectionArr[2].isSectionActive = false;
+        this.highlightSectionName(0);
       }
       else {
-        this.sectionArr[0].isSectionActive = false;
-        this.sectionArr[1].isSectionActive = false;
-        this.sectionArr[2].isSectionActive = false;
+        this.highlightSectionName(null);
       }
-
-      this.appTabHeaders.map((element: ElementRef) => {
-        element.nativeElement.blur();
-      });
     }
   title = 'portfolio-site';
   isHeaderSticky: boolean = false;
@@ -59,7 +46,19 @@ export class AppComponent {
     elementId.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
   }
 
-  highlightSectionName() {
-    
+  highlightSectionName(indexTrue: number) {
+    for(let i = 0; i < this.sectionArr.length; i++) {
+      if(indexTrue !== null) {
+        if(i === indexTrue) {
+          this.sectionArr[i].isSectionActive = true;
+        }
+        else {
+          this.sectionArr[i].isSectionActive = false;
+        }
+      }
+      else {
+        this.sectionArr[i].isSectionActive = false;
+      }
+    }
   }
 }

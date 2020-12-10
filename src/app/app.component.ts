@@ -29,7 +29,6 @@ export class AppComponent {
         this.sectionArr[2].isSectionActive = true;
         this.sectionArr[0].isSectionActive = false;
         this.sectionArr[1].isSectionActive = false;
-        this.interests.nativeElement.focus();
       }
       else if(this.portfolio.nativeElement.getBoundingClientRect().top <= 200) {
         this.sectionArr[1].isSectionActive = true;
@@ -47,14 +46,9 @@ export class AppComponent {
         this.sectionArr[2].isSectionActive = false;
       }
 
-      
-      // this.renderer.invokeElementMethod(
-      //   this.elementRef.nativeElement.ownerDocument.activeElement, 'blur'
-      // );
-
-      // this.renderer['blur'].apply(this.elementRef.nativeElement.ownerDocument.activeElement);
-      // this.elementRef.nativeElement.ownerDocument.activeElement.apply(blur)
-      // this.elementRef.nativeElement.blur();
+      this.appTabHeaders.map((element: ElementRef) => {
+        element.nativeElement.blur();
+      });
     }
   title = 'portfolio-site';
   isHeaderSticky: boolean = false;
@@ -63,8 +57,6 @@ export class AppComponent {
 
   onPageNavigate(elementId: Element, event: MouseEvent): void {
     elementId.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
-    console.log(event.target);
-    // event.target.blur();
   }
 
   highlightSectionName() {

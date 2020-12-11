@@ -1,4 +1,5 @@
 import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
+import { PortfolioItemInterface } from '../portfolio-item-interface';
 
 @Component({
   selector: 'app-portfolio-item',
@@ -6,12 +7,15 @@ import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular
   styleUrls: ['./portfolio-item.component.scss']
 })
 export class PortfolioItemComponent implements OnInit {
+  portfolioItemsArr: PortfolioItemInterface[] = [];
 
-  
 
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+
+    
+  }
 
   
 }

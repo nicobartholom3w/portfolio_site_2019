@@ -60,7 +60,7 @@
       </div>
     </div>
     <a #about id="about" class="anchor"></a>
-    <div class="nav">
+    <nav class="nav">
       <!-- <div 
           class="header header__filler"
           [class.header__filler-sticky]="isHeaderSticky"
@@ -124,7 +124,7 @@
           <div class="header__container-right">
             <div class="header__section-container">
               <a 
-                routerLink=""
+                routerLink="./"
                 appTabHeader
                 (click)="onPageNavigate(about, $event)"
                 class="header__section-ref"
@@ -134,7 +134,7 @@
                   class="header__section">About Me</div>
               </a>
               <a 
-                routerLink=""
+                routerLink="./"
                 appTabHeader
                 class="header__section-ref"
                 (click)="onPageNavigate(portfolio)">
@@ -143,7 +143,7 @@
                   class="header__section">Portfolio</div>
               </a>
               <a 
-                routerLink=""
+                routerLink="./"
                 appTabHeader
                 class="header__section-ref"
                 (click)="onPageNavigate(interests)">
@@ -155,7 +155,7 @@
           </div>
         </div>  
       </div>
-    </div>
+    </nav>
    
     
     <div class="main">
@@ -258,7 +258,7 @@
                   <li class="li__regular">I design & create promotional materials for WHRS in addition to caring for rescue rabbits & organizing fundraisers.</li>
                 </ul>
                 <div class="interests__img-container max-width">
-                  <img class="interests__img" src="/assets/img/hrs_rabbits.png" alt="three rabbits eating hay">
+                  <img class="interests__img" src="/assets/img/hrs_rabbits.png" alt="rabbits eating hay">
                 </div>
               </div>
             </div>

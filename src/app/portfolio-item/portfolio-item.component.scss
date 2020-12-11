@@ -1,7 +1,81 @@
+$font-main: 'Montserrat', sans-serif;
+$font-secondary: 'Istok Web', sans-serif;
 $cream: rgb(248, 243, 242);
+$indigo-dark: rgb(26, 44, 139);
+$blue-light: rgb(154, 219, 229);
+
 
 .container {
     height: 9.5rem;
     width: 14.5rem;
     background-color: $cream;
+    position: relative;
+    overflow: hidden;
+}
+
+.img {
+    height: 100%;
+    width: auto;
+    
+    &__container {
+        position: absolute;
+        // right: 2rem;
+        opacity: .75;
+        height: 150%;
+        width: 150%;
+        top: 0;
+    }
+}
+
+.info {
+    height: 50%;
+    width: 100%;
+    background-color:  rgba(26, 44, 139, .2);
+    // opacity: .2;
+    transition: all .3s;
+    color: $indigo-dark;
+    padding: .5rem;
+    box-sizing: border-box;
+
+    &__container {
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        
+    }
+
+    &__type {
+        font-family: $font-secondary;
+        font-size: .7rem;
+        &-container {
+            display: flex;
+        }
+        &-title {
+            font-family: $font-main;
+            font-weight: 700;
+            font-size: .7rem;
+        }
+    }
+
+    &__name {
+        font-family: $font-main;
+        font-weight: 700;
+        font-size: .7rem;
+    }
+    &__description {
+        font-family: $font-secondary;
+        font-size: .7rem;
+    }
+
+    &:hover {
+        
+    }
+    
+    &:focus {
+
+    }
 }

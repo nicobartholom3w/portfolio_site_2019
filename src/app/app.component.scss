@@ -16,6 +16,22 @@ $content-maxwidth: 47.2rem;
 $title-height: 5rem;
 $section-container-padding: 0 1.75rem 2.5rem 1.75rem;
 
+
+:host .portfolio__link:focus ::ng-deep {
+    .container {
+        box-shadow: 0 2px 3px 1px rgba(26, 44, 80, .5);
+    }
+    .img {
+        &__container {
+            opacity: 1;
+        }
+    }
+    .info {
+        color: $blue-light;
+        background-color: $indigo-dark;
+    }
+}
+
 .site {    
     height: 100%;
     min-width: 100%;
@@ -408,7 +424,7 @@ $section-container-padding: 0 1.75rem 2.5rem 1.75rem;
 
     &__link {
         text-decoration: none;
-        
+
         &-container {
             width: 14.5rem;
             padding-bottom: 1.85rem; 

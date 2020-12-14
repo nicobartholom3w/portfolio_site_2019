@@ -3,7 +3,7 @@ $font-secondary: 'Istok Web', sans-serif;
 $cream: rgb(248, 243, 242);
 $indigo-dark: rgb(26, 44, 139);
 $blue-light: rgb(154, 219, 229);
-
+$blue-extralight: rgb(216, 235, 237);
 
 .container {
     height: 9.5rem;
@@ -11,6 +11,30 @@ $blue-light: rgb(154, 219, 229);
     background-color: $cream;
     position: relative;
     overflow: hidden;
+    transition: all .3s;
+    &:hover {
+        box-shadow: 0 2px 3px 1px rgba(26, 44, 80, .5);
+        .img {
+            &__container {
+                opacity: 1;
+            }
+        }
+        .info {
+            color: $blue-light;
+            background-color: $indigo-dark;
+        }
+    }
+    &:focus {
+        .img {
+            &__container {
+                opacity: 1;
+            }
+        }
+        .info {
+            background-color: rgba(154, 219, 229, 1);
+            background-color: rgba(216, 235, 237, .8);
+        }
+    }
 }
 
 .img {
@@ -20,33 +44,30 @@ $blue-light: rgb(154, 219, 229);
     &__container {
         position: absolute;
         // right: 2rem;
-        opacity: .75;
+        opacity: .5;
         height: 150%;
         width: 150%;
         top: 0;
+        transition: all .3s;
     }
+    
 }
 
 .info {
     height: 50%;
     width: 100%;
-    background-color:  rgba(26, 44, 139, .2);
+    background-color:  rgba(26, 44, 139, .8);
+    // background-color: $cream;
+    // background-color: rgba(154, 219, 229, .35);
+    // background-color: rgba(216, 235, 237, 1);
     // opacity: .2;
     transition: all .3s;
     color: $indigo-dark;
+    color: $cream;
     padding: .5rem;
     box-sizing: border-box;
 
-    &__container {
-        height: 100%;
-        width: 100%;
-        z-index: 1;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        
-    }
+   
 
     &__type {
         font-family: $font-secondary;
@@ -70,12 +91,16 @@ $blue-light: rgb(154, 219, 229);
         font-family: $font-secondary;
         font-size: .7rem;
     }
-
-    &:hover {
+    &__container {
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        
         
     }
     
-    &:focus {
-
-    }
 }

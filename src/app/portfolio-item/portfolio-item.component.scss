@@ -57,39 +57,35 @@ $blue-extralight: rgb(216, 235, 237);
     height: 50%;
     width: 100%;
     background-color:  rgba(26, 44, 139, .8);
-    // background-color: $cream;
-    // background-color: rgba(154, 219, 229, .35);
-    // background-color: rgba(216, 235, 237, 1);
-    // opacity: .2;
     transition: all .3s;
     color: $indigo-dark;
     color: $cream;
-    padding: .5rem;
+    padding: .65rem;
     box-sizing: border-box;
-
-   
-
     &__type {
         font-family: $font-secondary;
-        font-size: .7rem;
+        font-size: .6rem;
         &-container {
             display: flex;
+            margin-bottom: .25rem;
         }
         &-title {
             font-family: $font-main;
-            font-weight: 700;
-            font-size: .7rem;
+            font-weight: 600;
+            font-size: .65rem;
+            margin-right: .5rem;
         }
     }
 
     &__name {
         font-family: $font-main;
-        font-weight: 700;
-        font-size: .7rem;
+        font-weight: 600;
+        font-size: .65rem;
+        text-decoration: underline;
     }
     &__description {
         font-family: $font-secondary;
-        font-size: .7rem;
+        font-size: .6rem;
     }
     &__container {
         height: 100%;

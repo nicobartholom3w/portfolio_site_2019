@@ -209,22 +209,14 @@
           <div class="portfolio__main">
             <a #interests id="interests" class="anchor anchor-interests"></a>
             <div class="portfolio__main-items">
-              <div class="portfolio__link-container max-width">
-                <a href="https://github.com/nicobartholom3w" class="portfolio__link">
-                  <app-portfolio-item></app-portfolio-item>
-                </a>
-              </div>
-              <div class="portfolio__link-container">
-                <a href="" class="portfolio__link">
-                  <app-portfolio-item></app-portfolio-item>
-                </a>
-              </div>
-              <div class="portfolio__link-container">
-                <a href="" class="portfolio__link">
-                  <app-portfolio-item></app-portfolio-item>
-                </a>
-                
-              </div>
+              <div 
+                *ngFor="let portfolioItem of portfolioItemsArr" 
+                class="portfolio__link-container max-width">
+                <div class="portfolio__link-container">
+                  <a href="{{ portfolioItem.link }}" class="portfolio__link">
+                    <app-portfolio-item [(itemInfo)]="portfolioItem"></app-portfolio-item>
+                  </a>
+                </div>
             </div>
           </div>
         </div>

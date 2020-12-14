@@ -1,5 +1,6 @@
-import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, Input, OnInit, ViewChild } from '@angular/core';
 import { PortfolioItemInterface } from '../portfolio-item-interface';
+import { PortfolioServiceService } from '../portfolio-service.service';
 
 @Component({
   selector: 'app-portfolio-item',
@@ -7,14 +8,12 @@ import { PortfolioItemInterface } from '../portfolio-item-interface';
   styleUrls: ['./portfolio-item.component.scss']
 })
 export class PortfolioItemComponent implements OnInit {
-  portfolioItemsArr: PortfolioItemInterface[] = [];
+  @Input() itemInfo: PortfolioItemInterface;
 
-
-  constructor() { }
+  constructor(private portfolioService: PortfolioServiceService) { }
 
   ngOnInit() {
 
-    
   }
 
   

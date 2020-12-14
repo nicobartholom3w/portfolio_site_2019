@@ -2,6 +2,8 @@ import { ViewportScroller } from '@angular/common';
 import { Target } from '@angular/compiler';
 import { Component, ElementRef, HostListener, QueryList, Renderer2, ViewChild, ViewChildren } from '@angular/core';
 import { TabHeaderDirective } from './directives/tab-header.directive';
+import { PortfolioItemInterface } from './portfolio-item-interface';
+import { PortfolioServiceService } from './portfolio-service.service';
 import { SectionInterface } from './section-interface';
 
 @Component({
@@ -40,7 +42,10 @@ export class AppComponent {
   title = 'portfolio-site';
   isHeaderSticky: boolean = false;
   sectionArr: SectionInterface[] = [{sectionName: "about", isSectionActive: false}, {sectionName: "portfolio", isSectionActive: false}, {sectionName: "interests", isSectionActive: false}]
-  constructor(private viewportScroller: ViewportScroller, private elementRef: ElementRef, private renderer: Renderer2) {}
+  portfolioItemsArr: PortfolioItemInterface[] = [];  
+  constructor(private viewportScroller: ViewportScroller, private elementRef: ElementRef, private renderer: Renderer2, private portfolioService: PortfolioServiceService) {
+    this.portfolioItemsArr = this.portfolioService.getPortfolioItemArr();
+  }
 
   onPageNavigate(elementId: Element, event: MouseEvent): void {
     elementId.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});

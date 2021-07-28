@@ -354,7 +354,9 @@ $section-container-padding: 0 1.75rem 2.5rem 1.75rem;
         transition: all .3s;
         margin-top: 1.5rem;
         cursor: pointer;
-
+        border-radius: .2rem;
+        text-decoration: none;
+        display: inline-block;
         &:hover {
             color: $blue-light;
             box-shadow: 0 2px 3px 1px rgba(26, 44, 80, .5);
@@ -363,6 +365,10 @@ $section-container-padding: 0 1.75rem 2.5rem 1.75rem;
         &:focus {
             color: $blue-light;
             box-shadow: 0 2px 3px 1px rgba(26, 44, 80, .5);
+        }
+
+        &-link {
+            
         }
     }
 }
@@ -755,6 +761,7 @@ footer {
     
         &-portfolio {
             top: 3.65rem;
+            
         }
     
         &-interests {

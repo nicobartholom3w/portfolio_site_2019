@@ -39,7 +39,6 @@ export class AppComponent {
         this.highlightSectionName(null);
       }
     }
-  title = 'portfolio-site';
   isHeaderSticky: boolean = false;
   sectionArr: SectionInterface[] = [{sectionName: "about", isSectionActive: false}, {sectionName: "portfolio", isSectionActive: false}, {sectionName: "interests", isSectionActive: false}]
   portfolioItemsArr: PortfolioItemInterface[] = [];  

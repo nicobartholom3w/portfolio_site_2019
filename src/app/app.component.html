@@ -74,7 +74,7 @@
             <div class="header__name">Nico Bartholomew</div>
 
             <div class="header__icon-container">
-              <a href="https://github.com/nicobartholom3w" class="header__icon-ref">
+              <a href="https://github.com/nicobartholom3w" target="_blank" class="header__icon-ref">
                 <svg class="header__icon" width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <title>github</title>
                     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -88,7 +88,7 @@
                     </g>
                 </svg>
               </a>
-              <a href="https://codepen.io/nicobartholom3w/" class="header__icon-ref">
+              <a href="https://codepen.io/nicobartholom3w/" target="_blank" class="header__icon-ref">
                 <svg class="header__icon" width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                   <title>codepen</title>
                   <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -102,7 +102,7 @@
                   </g>
                 </svg>
               </a>
-              <a href="https://www.linkedin.com/in/nicobartholomew" class="header__icon-ref">
+              <a href="https://www.linkedin.com/in/nicobartholomew" target="_blank" class="header__icon-ref">
                 <svg class="header__icon" width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                   <title>linkedin</title>
                   <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -137,7 +137,7 @@
                 routerLink="./"
                 appTabHeader
                 class="header__section-ref"
-                (click)="onPageNavigate(portfolio)">
+                (click)="onPageNavigate(portfolio, $event)">
                 <div 
                   [class.section-active]="sectionArr[1].isSectionActive"
                   class="header__section">Portfolio</div>
@@ -146,7 +146,7 @@
                 routerLink="./"
                 appTabHeader
                 class="header__section-ref"
-                (click)="onPageNavigate(interests)">
+                (click)="onPageNavigate(interests, $event)">
                 <div
                   [class.section-active]="sectionArr[2].isSectionActive" 
                   class="header__section">Interests</div>
@@ -192,12 +192,10 @@
                   <li>a software engineer & designer.</li>
                   <li>a practiced artist of many mediums.</li>
                   <li>creative & curious.</li>
-                  <!-- <li>dedicated to broadening horizons</li> -->
                 </ul>
               </div>
               <a #portfolio id="portfolio" class="anchor anchor-portfolio"></a>
-              <button href="mailto:nicobartholomew@gmail.com" class="about__button">Contact Me!</button>
-              
+              <a href="mailto:nicobartholomew@gmail.com" class="about__button">Contact Me!</a>
             </div>
           </div>
         </div>
@@ -214,8 +212,8 @@
                 *ngFor="let portfolioItem of portfolioItemsArr" 
                 class="portfolio__link-container max-width">
                 <div class="portfolio__link-container">
-                  <a href="{{ portfolioItem.link }}" class="portfolio__link">
-                    <app-portfolio-item [(itemInfo)]="portfolioItem"></app-portfolio-item>
+                  <a href="{{ portfolioItem.link }}" target="_blank" class="portfolio__link">
+                    <app-portfolio-item [itemInfo]="portfolioItem"></app-portfolio-item>
                   </a>
                 </div>
             </div>

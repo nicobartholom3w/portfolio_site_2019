@@ -20,8 +20,9 @@ $blue-extralight: rgb(216, 235, 237);
             }
         }
         .info {
-            color: $blue-light;
-            background-color: $indigo-dark;
+            // color: $blue-light;
+            color: $indigo-dark;
+            background-color: rgba(154, 219, 229, .3);
         }
     }
     &:focus {
@@ -39,13 +40,14 @@ $blue-extralight: rgb(216, 235, 237);
 
 .img {
     height: 100%;
-    width: auto;
+    width: 100%;
+    // width: auto;
     
     &__container {
         position: absolute;
         opacity: .5;
-        height: 150%;
-        width: 150%;
+        height: 100%;
+        width: 100%;
         top: 0;
         transition: all .3s;
     }
